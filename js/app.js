@@ -1,7 +1,6 @@
 'use strict';
 
 let userName = prompt('Hi! What\'s your name?');
-userName[0].toUpperCase;
 alert('Hi ' + userName + '! Welcome to the site!');
 
 const button = document.querySelector('#quizButton');
@@ -12,10 +11,11 @@ function quiz() {
 
   function qAndA(question, answer, wrongAnswer, explanation) {
     let response = prompt(question);
-    if (response[0].toLowerCase === answer) {
+
+    if (response[0].toLowerCase() === answer) {
       score++;
       alert('That\'s correct! ' + explanation);
-    } else if (response[0].toLowerCase === wrongAnswer) {
+    } else if (response[0].toLowerCase() === wrongAnswer) {
       alert('Sorry, that\'s not correct. You\'ll remember that ' + explanation);
     } else {
       alert('Sorry, I couldn\'t understand what you said. We\'ll continue on, but just know that ' + explanation);
