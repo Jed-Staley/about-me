@@ -14,14 +14,35 @@ body {
   }
 
   main {
-    .mainPara {
+    text-align: center;
+    color: ivory;
+
+    .centered {
       max-width: 600px;
       margin: 0 auto;
+    }
+
+    .mainPara {
       text-align: left;
     }
 
+    .columns {
+      display: flex;
+      justify-content: center;
+    }
+
+    .column1, .column2 {
+      flex: 1;
+      max-width: 300px;
+      text-align: left;
+    }
+
+    .column1 {
+      margin-right: 20px;
+    }
+
     .quizInfo {
-      margin-top: 150px;
+      margin-top: 50px;
     }
   }
 

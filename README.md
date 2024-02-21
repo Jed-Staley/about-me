@@ -4,6 +4,12 @@
 
 This is a website that asks the user questions and responds to their answers
 
+## Links:
+
+  1. <https://github.com/Jed-Staley/about-me>
+
+  2. <https://jed-staley.github.io/about-me/>
+
 ### Author: Jed Staley
 
 ### Links and Resources
@@ -12,8 +18,14 @@ This is a website that asks the user questions and responds to their answers
 
 ### Lighthouse Accessibility Report Score
 
-* ![alt text](image.png)
+#### Tuesday
+
+* ![alt text](lighthouse/image.png)
+
+#### Wednesday
+
+* ![alt text](lighthouse/Screenshot%20(4).png)
 
 ### Reflections and Comments
 
-* css is a pain, js rules, html is aight
+* Getting the files to link to each other correctly and consistently is a challenge, but setting them up individually is pretty straightforward so far.
