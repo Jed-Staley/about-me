@@ -16,6 +16,7 @@ body {
   main {
     text-align: center;
     color: ivory;
+    min-height: calc(100vh - 150px);
 
     .centered {
       max-width: 600px;
@@ -44,6 +45,11 @@ body {
     .quizInfo {
       margin-top: 50px;
     }
+
+    .footerSpace  {
+      display: inline-block; 
+      height: 200px;
+    }
   }
 
   footer {
@@ -57,7 +63,7 @@ body {
   .contactInfo {
     display: flex;
     justify-content: space-between;
-    padding: 20px 400px;
+    padding: 20px 10%;
 
     p {
       margin: 0;
