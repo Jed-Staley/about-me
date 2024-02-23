@@ -6,28 +6,38 @@ alert('Hi ' + userName + '! Welcome to the site!');
 const button = document.querySelector('#quizButton');
 button.onclick = function() {quiz();};
 
-function quiz() {
-  let score = 0;
+let score = 0;
 
-  function qAndA(question, answer, wrongAnswer, explanation) {
-    let response = prompt(question);
+function firstQuestions(question, answer, wrongAnswer, explanation) {
+  let response = prompt(question);
 
-    if (response[0].toLowerCase() === answer) {
-      score++;
-      alert('That\'s correct! ' + explanation);
-    } else if (response[0].toLowerCase() === wrongAnswer) {
-      alert('Sorry, that\'s not correct. You\'ll remember that ' + explanation);
-    } else {
-      alert('Sorry, I couldn\'t understand what you said. We\'ll continue on, but just know that ' + explanation);
-    }
+  if (response[0].toLowerCase() === answer) {
+    score++;
+    alert('That\'s correct! ' + explanation);
+  } else if (response[0].toLowerCase() === wrongAnswer) {
+    alert('Sorry, that\'s not correct. You\'ll remember that ' + explanation);
+  } else {
+    alert('Sorry, I couldn\'t understand what you said. We\'ll continue on, but just know that ' + explanation);
   }
+}
 
-  qAndA('Was Jed born in Montana?', 'n', 'y', 'Jed was born in was Missouri, not Montana.');
-  qAndA('Does Jed have 5 nieces and nephews?', 'y', 'n', 'Jed has 5 nieces and nephews.');
-  qAndA('Did Jed attend Columbia Valley Community College?', 'n', 'y', 'Jed was born in Columbia, Missouri but attended Catawba Valley Community College');
-  qAndA('Did Jed work for Amazon Inc. in order to work days?', 'n', 'y', 'Jed left Amazon Inc. in order to work days, not joined!');
-  qAndA('Following his employment at Amazon Inc., did Jed work for SAS Retail Services?', 'y', 'n', 'Jed did indeed work for SAS Retail Services following his employment at Amazon Inc.');
+function question1() {
+  firstQuestions('Was Jed born in Montana?', 'n', 'y', 'Jed was born in was Missouri, not Montana.');
+}
+function question2() {
+  firstQuestions('Does Jed have 5 nieces and nephews?', 'y', 'n', 'Jed has 5 nieces and nephews.');
+}
+function question3() {
+  firstQuestions('Did Jed attend Columbia Valley Community College?', 'n', 'y', 'Jed was born in Columbia, Missouri but attended Catawba Valley Community College');
+}
+function question4() {
+  firstQuestions('Did Jed work for Amazon Inc. in order to work days?', 'n', 'y', 'Jed left Amazon Inc. in order to work days, not joined!');
+}
+function question5() {
+  firstQuestions('Following his employment at Amazon Inc., did Jed work for SAS Retail Services?', 'y', 'n', 'Jed did indeed work for SAS Retail Services following his employment at Amazon Inc.');
+}
 
+function question6() {
   let guessFailed = true;
   for (let i = 1; i <= 4; i++) {
     let guess = prompt('How many questions so far do you think you\'ve gotten right?');
@@ -59,7 +69,9 @@ function quiz() {
   } else {
     score++;
   }
+}
 
+function question7() {
   for (let i = 6; i >= 1; i--) {
     let guess = prompt('Name one of Jed\'s top ten favorite Bible verses. Make sure to enter your answer properly! You have ' + i + ' remaining guesses.');
     let answers = ['romans 4:3','romans 8:28','colossians 4:5','matthew 22:29','romans 3:23','romans 8:10','romans 9:3','psalms 58:10','jeremiah 17:10','2nd peter 1:20'];
@@ -74,4 +86,14 @@ function quiz() {
     }
   }
   alert (`Congrats ${userName}, you've reached the end of the quiz with a score of ${score} out of 7.`);
+}
+
+function quiz() {
+  question1();
+  question2();
+  question3();
+  question4();
+  question5();
+  question6();
+  question7();
 }
