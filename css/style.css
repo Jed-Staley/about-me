@@ -17,6 +17,7 @@ body {
     text-align: center;
     color: ivory;
     min-height: calc(100vh - 150px);
+    display: block;
 
     .centered {
       max-width: 600px;

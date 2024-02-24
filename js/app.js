@@ -3,6 +3,7 @@
 let userName = prompt('Hi! What\'s your name?');
 alert('Hi ' + userName + '! Welcome to the site!');
 
+const hidingBlock = document.querySelector('#aboutMe');
 const button = document.querySelector('#quizButton');
 button.onclick = function() {quiz();};
 
@@ -89,11 +90,17 @@ function question7() {
 }
 
 function quiz() {
-  question1();
-  question2();
-  question3();
-  question4();
-  question5();
-  question6();
-  question7();
+  hidingBlock.style.display = 'none';
+  setTimeout(function() {
+    question1();
+    question2();
+    question3();
+    question4();
+    question5();
+    question6();
+    question7();
+    setTimeout(function() {
+      hidingBlock.style.display = 'block';
+    }, 3000);
+  }, 0);
 }
